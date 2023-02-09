@@ -1,0 +1,4 @@
+pytest~=7.2.1
+numpy~=1.24.1
+opencv-python~=4.5.5.64
+setuptools~=60.2.0

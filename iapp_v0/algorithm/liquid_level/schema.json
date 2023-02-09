@@ -1,0 +1,74 @@
+{
+  "name": "液位读数识别",
+  "code": "CODE_10093",
+  "des": "基于颜色过滤的液位读数识别",
+  "url": "http://localhost:5000/identify/liQuidLevel/1",
+  "imgPath": "[\"'D:\\Pythoncode\\learningcv\\box\\images\\test_.jpg\"]",
+  "isCompareTemp": true,
+  "inputParam": {
+    "column": {
+      "name": "矩形液柱",
+      "type": "square",
+      "value": "[{\"x\":325,\"y\":116},{\"x\":331,\"y\":115},{\"x\":346,\"y\":310},{\"x\":337,\"y\":310}]",
+      "des": "数组形式，元素是一个point对象，长度为4，分别为左上、左下、右下、右上顶点坐标"
+    },
+    "range_up": {
+      "name": "量程上限",
+      "type": "number",
+      "value": "15",
+      "des": "液位上下限"
+    },
+    "range_down": {
+      "name": "量程下限",
+      "type": "number",
+      "value": "156",
+      "des": "液位上下限"
+    },
+    "upper": {
+      "name": "报警上限",
+      "type": "point",
+      "value": "{\"x\":335, \"y\":157}",
+      "des": "一个point对象，点的坐标"
+    },
+    "lower": {
+      "name": "报警下限",
+      "type": "point",
+      "value": "{\"x\":335, \"y\":217}",
+      "des": "一个point对象，点的坐标"
+    },
+    "liquid": {
+      "name": "当前液位",
+      "type": "point",
+      "value": "{\"x\":335, \"y\":190}",
+      "des": "一个point对象，点的坐标"
+    },
+    "color": {
+      "name": "液柱颜色",
+      "type": "string",
+      "value": "Red",
+      "des": "下拉参数"
+    }
+  },
+  "constantList": [
+    {
+      "algorithmParamKey": "liQuidLevel1Cache",
+      "name": "liQuidLevel1Cache",
+      "des": "液位(红)读数识别",
+      "time": "2022-12-21 16:59:03"
+    }
+  ],
+  "outputParam": {
+    "liQuidLevel1Cache": {
+      "name": "浮点数",
+      "type": "double",
+      "value": "9263",
+      "des": "液位(红)读数识别"
+    },
+    "audio": {
+      "name": "字符串",
+      "type": "audio",
+      "value": "hello world",
+      "des": "将发送kafka，语音播报"
+    }
+  }
+}

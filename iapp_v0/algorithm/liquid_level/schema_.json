@@ -1,0 +1,86 @@
+{
+    "name": "液位读数识别",
+    "code": "CODE_10093",
+    "des": "基于颜色过滤的液位读数识别",
+    "url": "http://localhost:5000/identify/liQuidLevel/1",
+    "isCompareTemp": true,
+    "inputParam": {
+        "imgPath": {
+            "name": "图像源路径",
+            "type": "string",
+            "value": "D:\\Pythoncode\\learningcv\\box\\images\\test_.jpg",
+            "des": "字符串形式的算法输入源图像的路径名称"
+        },
+        "colorSeries": {
+            "name": "液柱颜色",
+            "type": "string",
+            "value": "Red",
+            "des": "下拉列表"
+        },
+        "rangeUp": {
+            "name": "量程上限",
+            "type": "number",
+            "value": "15",
+            "des": "液位上下限"
+        },
+        "rangeDown": {
+            "name": "量程下限",
+            "type": "number",
+            "value": "156",
+            "des": "液位上下限"
+        },
+        "column": {
+            "name": "矩形液柱",
+            "type": "square",
+            "value": "[[325,116],[331,115],[346,310],[337,310]]",
+            "des": "数组形式，元素是一个point对象，长度为4，分别为左上、左下、右下、右上顶点坐标"
+        },
+        "thresholdUpper": {
+            "name": "报警上限",
+            "type": "point",
+            "value": "[335, 157]",
+            "des": "一个point对象，点的坐标"
+        },
+        "thresholdLower": {
+            "name": "报警下限",
+            "type": "point",
+            "value": "[335,217]",
+            "des": "一个point对象，点的坐标"
+        },
+        "outputType": {
+            "name": "输出类型",
+            "type": "string",
+            "value": "ValueQuality",
+            "des": "输出类型枚举"
+        },
+        "liquid": {
+            "name": "当前液位",
+            "type": "point",
+            "value": "{\"x\":335, \"y\":190}",
+            "des": "一个point对象，点的坐标",
+            "nullable": true
+        }
+    },
+    "constantList": [
+        {
+            "algorithmParamKey": "liQuidLevel1Cache",
+            "name": "liQuidLevel1Cache",
+            "des": "液位(红)读数识别",
+            "time": "2022-12-21 16:59:03"
+        }
+    ],
+    "outputParam": {
+        "liQuidLevel1Cache": {
+            "name": "浮点数",
+            "type": "double",
+            "value": "9263",
+            "des": "液位(红)读数识别"
+        },
+        "audio": {
+            "name": "字符串",
+            "type": "audio",
+            "value": "hello world",
+            "des": "将发送kafka，语音播报"
+        }
+    }
+}
